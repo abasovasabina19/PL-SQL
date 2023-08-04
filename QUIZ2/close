@@ -1,0 +1,73 @@
+1.c
+2.c
+3.c
+4.a
+5.c
+6.b
+7.d
+8.a
+9.c
+10.d
+
+**Quiz Questions:**
+
+1. IF Statement:
+ What is the purpose of the IF statement in PL/SQL?
+    a. To perform arithmetic operations.
+    b. To define user-defined functions.
+    c. To enable conditional branching.
+    d. To handle exception handling.
+2. IF Statement:
+ Which keyword is used in the IF statement to define an alternative condition when the original condition is FALSE?
+    a. THEN
+    b. ELSE
+    c. ELSIF
+    d. OTHERWISE
+3. Simple CASE:
+ What is the purpose of the simple CASE statement in PL/SQL?
+    a. To handle multiple exceptions.
+    b. To define user-defined functions.
+    c. To enable conditional branching based on specific values.
+    d. To perform date and time arithmetic.
+4. Simple CASE:
+ In the simple CASE form, the CASE expression is compared with:
+    a. Specific values.
+    b. Boolean conditions.
+    c. Complex expressions.
+    d. All of the above.
+5. Searched CASE:
+ What is the difference between a simple CASE and a searched CASE in PL/SQL?
+    a. A simple CASE has only one WHEN clause, while a searched CASE has multiple WHEN clauses.
+    b. A simple CASE can only handle numeric data types, while a searched CASE can handle any data type.
+    c. A simple CASE compares the expression with specific values, while a searched CASE evaluates multiple conditions.
+    d. A simple CASE requires an ELSE clause, while a searched CASE does not.
+6. Searched CASE:
+ Which form of the CASE statement evaluates each condition until it finds a TRUE condition?
+    a. Simple CASE
+    b. Searched CASE
+    c. Both forms evaluate all conditions regardless of their truth value.
+    d. None of the above.
+7. IF Statement:
+ How do you use the IF statement to handle nested conditions in PL/SQL?
+    a. By using nested IF statements inside the main IF block.
+    b. By using the CASE statement instead of nested IF statements.
+    c. By defining user-defined functions for each condition.
+    d. By using the LOOP statement to handle nested conditions.
+8. IF Statement:
+ What happens if none of the conditions in the IF statement are TRUE, and there is no ELSE part?
+    a. The program raises an exception and terminates.
+    b. The program executes the ELSE part (if present) and continues with the next statement.
+    c. The program ignores the IF statement and continues with the next statement.
+    d. The program enters an infinite loop and crashes.
+9. Simple CASE:
+ In the simple CASE form, what is executed when none of the conditions match?
+    a. The code following the WHEN keyword with the first matching value.
+    b. The code following the THEN keyword with the first matching value.
+    c. The code following the ELSE keyword.
+    d. The code following the END CASE keyword.
+10. Searched CASE:
+ Which of the following statements about the searched CASE statement is true?
+a. The searched CASE can only handle numeric data types.
+b. The searched CASE cannot handle NULL values in conditions.
+c. The searched CASE must have an ELSE clause.
+d. The searched CASE evaluates each condition in order and executes the first TRUE condition block.
