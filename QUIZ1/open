@@ -1,0 +1,60 @@
+**Open-Format Questions:**
+
+1. Scalar Data Types:
+**Open Format:** Explain the purpose of the BOOLEAN data type in PL/SQL and provide a practical example of how it can be used in a conditional statement.
+2. Composite Data Types:
+**Open Format:** Create a Nested Table in PL/SQL named `employee_skills` to store the skills of five employees. 
+Populate the Nested Table with employee names and their respective skills. Display the contents of the Nested Table.
+3. Reference Data Types:
+**Open Format:** Describe the differences between the REF CURSOR and
+the REF data types in PL/SQL and provide specific use cases where each type would be more suitable.
+4. LOB Data Types:
+**Open Format:** Explain the purpose of the CLOB data type in PL/SQL and provide a real-world use case where it would be beneficial.
+5. Collection Data Types:
+**Open Format:** Compare and contrast VARRAY, Nested Table, and Associative Array (PL/SQL Table) in terms of their usage,
+limitations, and scenarios where each would be more appropriate.
+
+**Answers**
+1.Boolean data tipi mentiqi emeliyyatlari icra edir , burada iki deyer yeni True ve False olur.PL/SQL de loop nezareti ucun istifade olunur
+Numune:
+DECLARE
+    is_resident BOOLEAN := TRUE; 
+BEGIN
+    IF is_resident THEN
+        DBMS_OUTPUT.PUT_LINE('Residentdir');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Resident deyil');
+    END IF;
+END;
+
+3.REF CURSOR məlumat növü bizə kursora istinad yaratmağa imkan verir.
+PL/SQL-də saxlanılan prosedur və ya funksiyalardan sorğu nəticələrini qaytarmaq üçün istifadə olunur.
+REF CURSOR dinamik şəkildə qurulmuş SQL sorğusunun nəticə dəstini saxlaya bilər və  hər bir cərgəni emal etmək üçün nəticə dəsti arasında dövr etmek mumkundur.
+REF məlumat növü verilənlər bazasında obyektlərə və ya sıralara istinadlar yaratmaq üçün istifadə olunur.
+O, mövcud obyektlərə göstəricilər yaratmağa və onlardan PL/SQL kodu daxilində istifadə etməyə imkan verir.
+Summary: REF CURSOR dinamik sorğular üçün, REF isə obyektlərə istinad etmək üçün istifadə olunur.
+4.CLOB (Character Large Object) məlumat növü mətn sənədləri, XML məlumatları və ya
+digər mətn məlumatları kimi böyük həcmli xarakter məlumatlarını saxlamaq üçün istifadə olunur. 4 GB-a qədər məlumat saxlaya bilər.
+CLOB istənilən simvol dəstində böyük sənədlər kimi unicode xarakterə əsaslanan məlumatları saxlamaq üçün
+istifadə olunur.
+5.VARRAY (Dəyişən Ölçü Massivi):
+VARRAY eyni tipli elementlərin sabit ölçülü, sifarişli toplusudur.
+VARRAY-ın ölçüsü bəyannamə zamanı müəyyən edilir və sonradan dəyişdirilə bilməz.
+VARRAY-lar saxlamağınız lazım olan elementlərin maksimum sayını əvvəlcədən bildiyiniz zaman istifadə olunur.
+Əsas məhdudiyyət sabit ölçüdür. 
+VARRAY-lər seyrək ola bilməz, yəni onlar həmişə ardıcıl indeks dəyərlərinə malikdirlər.
+
+Nested table :
+İç-içə Cədvəllər eyni tipli elementlərin dinamik, qeyri-məhdud kolleksiyalarıdır.
+Onların sabit ölçüsü yoxdur və lazım olduqda elementlər əlavə edilə və ya çıxarıla bilər.
+İç-içə Cədvəllər proqramın icrası zamanı böyüyə və ya kiçilə bilən çevik məlumat strukturu istədiyiniz zaman istifadə olunur.
+İç-içə Cədvəldəki elementlərə daxil olmaq VARRAY və Assosiativ Massivlərlə müqayisədə ümumiyyətlə daha yavaşdır.
+İç-içə Cədvəldən elementlərin silinməsi parçalanmaya səbəb ola bilər və zamanla performansa təsir edə bilər.
+
+Assosiativ Massiv :
+Assosiativ Massivlər massivlərə bənzəyir və qeyri-məhdud sayda elementi saxlaya bilir.
+Onlar ölçünün əvvəlcədən bəyan edilməsini tələb etmir və elementlər açar-dəyər cütlərində saxlanılır.
+Assosiativ massivlər sadə axtarış cədvəlinə bənzər quruluşa ehtiyacınız olduqda istifadə olunur.
+İç-içə Cədvəllər və VARRAY-lərdən fərqli olaraq, Assosiativ Massivlər verilənlər bazasında saxlanıla bilməz. Onlar PL/SQL konteksti ilə məhdudlaşır və
+sessiyalar arasında ötürülə və ya davamlı olaraq saxlanıla bilməz.
+Assosiativ massivlər böyük məlumat dəstləri üçün daha az səmərəlidir, çünki onlar ilk növbədə daha kiçik, müvəqqəti məlumatların saxlanması üçün nəzərdə tutulub.
