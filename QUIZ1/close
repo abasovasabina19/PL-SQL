@@ -1,0 +1,74 @@
+**Answers**
+1.c
+2.a
+3.c
+4.a
+5.c
+6.b
+7.a
+8.a
+9.c
+10.a
+
+**Quiz Questions:**
+
+1. Scalar Data Types:
+ What is the purpose of the NUMBER data type in PL/SQL?
+    a. To store large text data.
+    b. To store binary data.
+    c. To store numeric values.
+    d. To store date and time information.
+2. Composite Data Types:
+ What does the VARRAY data type represent in PL/SQL?
+    a. A variable-size array.
+    b. A fixed-size array.
+    c. A reference to a cursor.
+    d. A collection of LOB types.
+3. Reference Data Types:
+ What is the purpose of the REF CURSOR data type in PL/SQL?
+    a. To store binary data.
+    b. To create references to objects in the database.
+    c. To return query results from procedures and functions.
+    d. To store character data.
+4. LOB Data Types:
+ Which data type is suitable for storing large amounts of character data in PL/SQL?
+    a. CLOB
+    b. BLOB
+    c. NCLOB
+    d. VARCHAR2
+5. Collection Data Types:
+ Which collection data type allows you to access elements using a unique key in PL/SQL?
+    a. Nested Table
+    b. VARRAY
+    c. Associative Array (PL/SQL Table)
+    d. REF CURSOR
+6. Scalar Data Types:
+ Which data type is used to store character data with a fixed length in PL/SQL?
+    a. VARCHAR2
+    b. CHAR
+    c. BOOLEAN
+    d. DATE
+7. Composite Data Types:
+ What is the purpose of the RECORD data type in PL/SQL?
+    a. To store multiple rows of data.
+    b. To create user-defined functions.
+    c. To define custom data structures.
+    d. To perform date and time arithmetic.
+8. Reference Data Types:
+ How does the REF data type in PL/SQL differ from a REF CURSOR?
+    a. REF CURSOR is used for dynamic queries, while REF is used for referencing objects.
+    b. REF is used for dynamic queries, while REF CURSOR is used for referencing objects.
+    c. They are the same and can be used interchangeably.
+    d. Both are used for referencing objects.
+9. LOB Data Types:
+ What is the purpose of the BFILE data type in PL/SQL?
+    a. To store large text data.
+    b. To store binary data.
+    c. To store references to external binary files.
+    d. To store large amounts of character data.
+10. Collection Data Types:
+ What happens if you try to access an element beyond the bounds of a VARRAY in PL/SQL?
+    a. It raises an exception.
+    b. It automatically extends the VARRAY to accommodate the new element.
+    c. It discards the existing elements to make room for the new element.
+    d. It returns NULL for the out-of-bounds element.
