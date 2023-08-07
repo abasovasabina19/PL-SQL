@@ -1,0 +1,28 @@
+**Open-Format Questions:**
+
+1. **Open Format:** Provide a practical example of how you would use the IF statement in PL/SQL to check if a given number is positive, negative, or zero.
+2. **Open Format:** Create a simple CASE statement in PL/SQL that evaluates the value of the `gender` variable and assigns "Male" or "Female
+" to the `gender_label` variable based on the value.
+3. **Open Format:** Explain the difference between the simple CASE and searched CASE forms in the CASE statement. Provide scenarios where each form is more suitable.
+4. **Open Format:** Describe a scenario where you would use nested IF statements to handle multiple conditions in PL/SQL. Provide an example
+of how you would implement it.
+5. **Open Format:** How do you use the CASE statement to handle multiple conditions with complex expressions in PL/SQL? Provide a practical example 
+to demonstrate its usage.
+
+**ANSWERS**
+1.DECLARE
+v_number NUMBER:=2;
+BEGIN
+IF 
+v_number>0 then
+dbms_output.put_line('Positive number');
+ELSIF 
+v_number<0 then
+dbms_output.put_line('Negative number');
+ELSE
+dbms_output.put_line('ZERO');
+END IF;
+END;
+
+SET SERVEROUTPUT ON;
+2.
