@@ -99,8 +99,8 @@ END;
 10. **Simple CASE Statement**
 - Task: Check if `v_day` represents a weekend (6 or 7) or a weekday (1-5) and print the result:
 DECLARE
-   v_day NUMBER := 6; 
-   v_result VARCHAR2(20);
+   v_day NUMBER := 3; 
+   v_result VARCHAR2(10);
 BEGIN
    v_result := CASE
  WHEN v_day = 6 OR v_day = 7 THEN 'Weekend'
