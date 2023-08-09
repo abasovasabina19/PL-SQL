@@ -72,7 +72,7 @@ END;
 DECLARE
   v_temp NUMBER := 55;
 BEGIN
-IF v_temp>0 or v_temp between 50 and 100
+IF v_temp<0 or v_temp between 50 and 100
 then
 dbms_output.put_line('Special Range');
 end IF;
