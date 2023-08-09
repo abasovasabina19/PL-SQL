@@ -1,0 +1,111 @@
+1. **Multiple Conditions**
+    - Task: Check if `v_num` is positive and less than 100. If true, print "Valid Range":
+declare
+v_num NUMBER := 58;
+BEGIN
+IF v_num>0 
+and v_num<100 
+then 
+dbms_output.put_line('Valid range');
+end IF;
+END;
+set serveroutput on;
+
+2. **String and Numeric Checks**
+    - Task: If `v_str` is "Active" and `v_val` is a multiple of 5, print "Valid Entry":
+
+DECLARE
+  v_str VARCHAR2(20) := 'Active';
+  v_val NUMBER := 10;
+BEGIN
+  IF  v_str='Active' and  mod(v_val,5)=0
+  then 
+  dbms_output.put_line('Valid entry');
+  end IF;
+END;
+3. **Simple Nested Conditions**
+    - Task: Given `v_score`, classify into "Excellent", "Good", or "Average":
+DECLARE
+  v_score NUMBER := 78;
+BEGIN
+  IF v_score>85 then
+  dbms_output.put_line('Excellent');
+  ELSIF v_score>60 then
+  dbms_output.put_line('Good');
+  else
+  dbms_output.put_line('Average');
+  end IF;
+  
+END;
+4. **Basic Boolean Checks**
+    - Task: Given `v_status` and `v_active`, if both are true, print "Fully Active":
+DECLARE
+  v_status BOOLEAN := TRUE;
+  v_active BOOLEAN := TRUE;
+BEGIN
+  IF v_status=TRUE and v_active=TRUE
+  then
+  dbms_output.put_line('Fully Active');
+  end IF;
+END;
+5. **Using BETWEEN Operator**
+    - Task: Determine if `v_quantity` is between 20 and 100. If true, print "Valid Quantity":
+DECLARE
+  v_quantity NUMBER := 50;
+BEGIN
+  IF v_quantity between 20 and 100 then
+  dbms_output.put_line('Valid Quantity');
+  end IF;
+END;
+6. **String Length Check**
+    - Task: If the length of `v_text` is between 5 and 15 characters, print "Valid Length":
+DECLARE
+  v_text VARCHAR2(50) := 'PL/SQL';
+BEGIN
+  IF length(v_text) between 5 and 15 
+  then
+  dbms_output.put_line('Valid length');
+  end IF;
+END;
+7. **Combined AND & OR Conditions**
+    - Task: Check if `v_temp` is less than 0 OR between 50 and 100. If true, print "Special Range":
+DECLARE
+  v_temp NUMBER := 55;
+BEGIN
+IF v_temp>0 or v_temp between 50 and 100
+then
+dbms_output.put_line('Special Range');
+end IF;
+
+END;
+8. **String Ends With Check**
+    - Task: Determine if `v_code` ends with "XYZ". If so, print "Code Valid":
+DECLARE
+   v_code VARCHAR2(50) := 'ABCDXYZ'; 
+   BEGIN
+   IF SUBSTR(v_code, -3) = 'XYZ' THEN
+      DBMS_OUTPUT.PUT_LINE('Code Valid');
+   END IF;
+END;
+9. **NULL Check for Address**
+    - Task: If `v_address` is null, print "Address Required":
+DECLARE
+  v_address VARCHAR2(100);
+BEGIN
+  IF v_address is null then
+  dbms_output.put_line('Address Required');
+  end IF;
+END;
+10. **Simple CASE Statement**
+- Task: Check if `v_day` represents a weekend (6 or 7) or a weekday (1-5) and print the result:
+DECLARE
+   v_day NUMBER := 6; 
+   v_result VARCHAR2(20);
+BEGIN
+   v_result := CASE
+ WHEN v_day = 6 OR v_day = 7 THEN 'Weekend'
+ WHEN v_day BETWEEN 1 AND 5 THEN 'Weekday'
+ END;
+
+DBMS_OUTPUT.PUT_LINE('Result: ' || v_result);
+END;
