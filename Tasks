@@ -100,12 +100,12 @@ END;
 - Task: Check if `v_day` represents a weekend (6 or 7) or a weekday (1-5) and print the result:
 DECLARE
    v_day NUMBER := 3; 
-   v_result VARCHAR2(10);
+   v_day_type VARCHAR2(10);
 BEGIN
-   v_result := CASE
+   v_day_type := CASE
  WHEN v_day = 6 OR v_day = 7 THEN 'Weekend'
  WHEN v_day BETWEEN 1 AND 5 THEN 'Weekday'
  END;
 
-DBMS_OUTPUT.PUT_LINE( v_result);
+DBMS_OUTPUT.PUT_LINE( v_day_type);
 END;
