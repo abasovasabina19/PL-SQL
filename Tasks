@@ -107,5 +107,5 @@ BEGIN
  WHEN v_day BETWEEN 1 AND 5 THEN 'Weekday'
  END;
 
-DBMS_OUTPUT.PUT_LINE('Result: ' || v_result);
+DBMS_OUTPUT.PUT_LINE( v_result);
 END;
