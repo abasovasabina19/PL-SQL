@@ -1,0 +1,58 @@
+**Task 1: Anonymous Block with IF-ELSE**
+Task: Write an anonymous block that checks if `v_salary` of employee with `employee_id` 105 is greater than 5000.
+If true, print "High Salary," otherwise print "Low Salary."
+set serveroutput on;
+DECLARE
+   v_salary NUMBER;
+BEGIN
+   SELECT salary INTO v_salary FROM employees WHERE employee_id = 105;
+   IF v_salary>5000 then
+   dbms_output.put_line('High Salary');
+   else
+   dbms_output.put_line('Low Salary');
+   END IF;
+END;
+**Task 2: Data Type Conversion in Anonymous Block**
+Task: Write an anonymous block that calculates the `v_duration` in years for the difference between the `start_date` and
+`end_date` of the `job_history` for `employee_id` 103.
+declare
+v_duration number;
+BEGIN
+select end_date - start_date INTO v_duration FROM job_history WHERE employee_id = 103;
+v_duration := v_duration / 365;
+DBMS_OUTPUT.PUT_LINE( v_duration);
+END;
+**Task 5: Anonymous Block with NULL Handling**
+Task: Write an anonymous block that retrieves the `v_manager_name` of the manager for employee with `employee_id` 120. 
+If the manager is not assigned, print "No Manager."
+DECLARE
+v_manager_name VARCHAR2(50);
+BEGIN
+   SELECT first_name || ' ' || last_name INTO v_manager_name FROM employees WHERE employee_id = 120;
+   IF v_manager_name is null then
+   DBMS_OUTPUT.PUT_LINE('No Manager');
+   ELSE
+   DBMS_OUTPUT.PUT_LINE(v_manager_name);
+   END IF;
+END;
+**Task 6: Anonymous Block with Type Conversion**
+Task: Write an anonymous block that converts the `v_hire_date` of employee with `employee_id` 125 into a string format (e.g., '2023-08-15') and prints it.
+DECLARE
+   v_hire_date DATE;
+   v_date varchar2(30);
+BEGIN
+   SELECT hire_date INTO v_hire_date FROM employees WHERE employee_id = 125;
+   v_date:=to_char(v_hire_date ,'YYYY-MM-DD');
+   DBMS_OUTPUT.PUT_LINE(v_date);
+END;
+**Task 7: Anonymous Block with Data Type Comparison**
+Task: Write an anonymous block that compares the `v_start_date` of employee with `employee_id` 130 to the current date.
+If the start date is in the past, print "Started."
+DECLARE
+    v_start_date DATE;
+BEGIN
+    SELECT hire_date INTO v_start_date FROM employees WHERE employee_id = 130;
+    IF v_start_date < sysdate THEN
+        DBMS_OUTPUT.PUT_LINE('Started.');
+    END IF;
+END;
