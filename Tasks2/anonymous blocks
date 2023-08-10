@@ -45,3 +45,35 @@ v_last_name varchar2(20):='Abasova';
 begin
 dbms_output.put_line(v_first_name || ' ' || v_last_name);
 end;
+6. **IF Statement in Block**
+    - Task: Declare a number variable `v_age`. If `v_age` is greater than 18, print "Adult". Otherwise, print "Minor".
+declare
+v_age number;
+begin
+IF v_age >18 then
+dbms_output.put_line('Adult');
+else
+dbms_output.put_line('Minor');
+end IF;
+end ;
+set serveroutput on;
+7. **Using Loops**
+    - Task: Declare a number variable `v_counter` and initialize it with 1. Write a loop that outputs the numbers from 1 to 5 using this variable.
+DECLARE
+ v_counter NUMBER := 1;
+BEGIN
+WHILE v_counter <= 5 LOOP
+DBMS_OUTPUT.PUT_LINE(v_counter);
+v_counter := v_counter + 1;
+END LOOP;
+END;
+9. **Using Built-in Functions**
+   - Task: Declare a string variable `v_text` and initialize it with "oracle". Convert the string to uppercase and then output the result.
+declare 
+v_text varchar2(10):='oracle';
+v_result varchar2(10);
+begin
+v_result:=upper(v_text);
+dbms_output.put_line(v_result);
+end;
+
