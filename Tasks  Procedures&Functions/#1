@@ -1,0 +1,14 @@
+1. **Basic Procedure Creation**
+    - Task: Create a procedure called `proc_display` that simply prints "Hello from Procedure!".
+create or replace procedure  proc_display is
+begin
+  DBMS_OUTPUT.PUT_LINE('Hello from Procedure!');
+end;
+2. **Procedure with Parameter**
+    - Task: Create a procedure `proc_greet` that takes a `v_name` parameter and prints "Hello, [v_name]!".
+create or replace procedure proc_greet(v_name VARCHAR2) is
+begin
+  DBMS_OUTPUT.PUT_LINE('Hello'||',' || v_name|| '!');
+end;
+3. **Function Returning Number**
+    - Task: Create a function `func_square` that takes a number as an argument and returns its square.
