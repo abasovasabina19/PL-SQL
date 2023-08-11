@@ -1,0 +1,62 @@
+**Quiz Questions:**
+
+1. **Question 1:** What is the purpose of using procedures in Oracle?
+a) To return a value
+b) To perform calculations
+c) To group SQL statements
+d) To store data in tables
+Answer:d
+2. **Question 2:** Which type of parameter can be used in both input and output operations?
+a) IN
+b) OUT
+c) IN OUT 
+d) NONE
+Answer:c
+3. **Question 3:** How are local variables declared in a procedure?
+a) Using the DECLARE keyword
+b) Using the LOCAL keyword
+c) Using the VAR keyword
+d) Local variables are not allowed in procedures
+Answer:a
+4. **Question 4:** Which keyword is used to call a procedure from an anonymous PL/SQL block?
+a) BEGIN
+b) EXECUTE
+c) CALL
+d) DECLARE
+Answer:b
+5. **Question 5:** What is the main difference between a function and a procedure in Oracle?
+a) Functions can have input parameters, while procedures cannot.
+b) Procedures can return a value, while functions cannot.
+c) Functions are used for calculations, while procedures are used for data storage.
+d) There is no difference between functions and procedures in Oracle.
+Answers:c
+6. **Question 6:** Which clause is used to specify the return type of a function in Oracle?
+a) RETURNS
+b) RESULT
+c) RETURN
+d) RESULTSET
+Answer:c
+7. **Question 7:** What happens when a function is called from a SQL query?
+a) The function's name is replaced with its code.
+b) The function is executed, and its return value is used in the query.
+c) The function is ignored in the query.
+d) The query returns an error.
+Answer:b
+8. **Question 8:** In a function, how can you return a NULL value if no result is found?
+a) Use the RETURN NULL; statement.
+b) Use the RETURN; statement.
+c) Use the RETURN 0; statement.
+d) Use the RETURN 'NULL'; statement.
+Answer:b
+9. **Question 9:** Which of the following is NOT a valid datatype for a function parameter?
+a) NUMBER
+b) VARCHAR2
+c) DATE
+d) BOOLEAN
+Answer:d
+10. **Question 10:** What is the purpose of using functions in Oracle?
+a) To perform actions or tasks
+b) To group SQL statements
+c) To return a single result
+d) To store data in tables
+Answer:a
