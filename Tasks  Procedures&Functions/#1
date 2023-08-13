@@ -8,7 +8,85 @@ end;
     - Task: Create a procedure `proc_greet` that takes a `v_name` parameter and prints "Hello, [v_name]!".
 create or replace procedure proc_greet(v_name VARCHAR2) is
 begin
-  DBMS_OUTPUT.PUT_LINE('Hello'||',' || v_name|| '!');
+  DBMS_OUTPUT.PUT_LINE('Hello,' ||'[ v_name]!');
 end;
 3. **Function Returning Number**
     - Task: Create a function `func_square` that takes a number as an argument and returns its square.
+CREATE OR REPLACE function func_square(a_number NUMBER) RETURN NUMBER AS
+BEGIN
+    RETURN a_number * a_number;
+END func_square;
+/
+4. **Function with String Manipulation**
+    - Task: Write a function `func_upper` that takes a string and returns its uppercase version.
+CREATE OR REPLACE function func_upper(a_string string) RETURN NUMBER AS
+BEGIN
+    RETURN upper(a_string);
+END func_upper;
+
+/
+5. **Procedure with Multiple Parameters**
+    - Task: Create a procedure `proc_fullname` that takes `v_firstName` and `v_lastName` as parameters and prints the full name.
+CREATE OR REPLACE procedure proc_fullname(
+v_firstName varchar2,
+v_lastName varchar2) as
+
+BEGIN
+    DBMS_OUTPUT.PUT_LINE(v_firstname || ' ' || v_lastname);
+END ;
+
+/
+6. **Function with Conditional Logic**
+    - Task: Write a function `func_ageGroup` that takes an age as a parameter and returns 'Child' if age is less than 18, 'Adult' otherwise.
+create or replace function func_ageGroup(age NUMBER) RETURN number is
+v_ageGrouo varchar2;
+begin
+IF age>18 then
+v_ageGroup:='Adult';
+else 
+v_ageGroup:='Child';
+end IF;
+Return v_ageGroup;
+end func_ageGroup;
+7. **Procedure Using Loop**
+    - Task: Create a procedure `proc_displayNumbers` that takes a number `n` and prints numbers from 1 to `n`.
+create or replace procedure proc_displayNumbers(n number) as
+begin
+for i IN 1..n loop
+ DBMS_OUTPUT.PUT_LINE(i);
+    END LOOP;
+  END;
+8. **Function Using Arithmetic Operations**
+    - Task: Write a function `func_calculateArea` that takes the radius of a circle as an argument and returns its area.
+create or replace function func_calculateArea(radius NUMBER) RETURN number is 
+v_area number,
+pi number;
+begin
+v_area:=radius*radius*pi/2
+  RETURN v_area;
+end;
+9. **Procedure with Exception Handling**
+ - Task: Create a procedure `proc_divide` that takes two numbers and prints their division result. It should handle division by zero and print 
+an error message for it.
+create or replace procedure proc_divide(divisor number,divided number) is
+v_result float;
+begin
+v_result:=divided/divisor;
+dbms_output.put_line(v_result);
+
+EXCEPTION
+  WHEN zero_divide THEN
+        DBMS_OUTPUT.PUT_LINE(' error ');
+end;
+
+begin 
+proc_divide(0,10);
+end;
+
+10. **Function with Date Operations**
+- Task: Write a function `func_daysDifference` that takes two dates as arguments and returns the number of days between them.
+
+
+
+
+
