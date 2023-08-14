@@ -1,0 +1,52 @@
+**Questions:**
+
+1. What is the purpose of a loop in Oracle PL/SQL?
+a) To define subprograms
+b) To execute a block of code multiple times +
+c) To create tables and views
+d) To perform arithmetic operations
+2. Which loop type repeats a block of code as long as a specific condition remains true?
+a) Simple Loop
+b) WHILE Loop +
+c) Numeric FOR Loop
+d) Cursor FOR Loop
+3. The `EXIT` statement is used in which loop to terminate it unconditionally?
+a) Simple Loop +
+b) WHILE Loop
+c) Numeric FOR Loop
+d) Cursor FOR Loop
+4. In a numeric FOR loop, how is the loop index incremented or decremented?
+a) Manually by the programmer
+b) Automatically based on the specified range and step value +
+c) Using the CONTINUE statement
+d) It remains constant throughout the loop
+5. The cursor FOR loop is used for:
+a) Defining a cursor in PL/SQL
+b) Fetching data from a cursor and processing it row by row +
+c) Joining multiple tables in a query
+d) Creating and managing database connections
+6. Which loop construct is used to emulate a REPEAT UNTIL loop in PL/SQL?
+a) Simple Loop with EXIT WHEN +
+b) WHILE Loop
+c) Numeric FOR Loop
+d) Cursor FOR Loop
+7. What is the purpose of a label in a loop?
+a) To make the loop run faster
+b) To assign a name to a variable used in the loop
+c) To specify which loop to exit or continue, especially in nested loops +
+d) To define a subprogram within the loop
+8. How do you skip the rest of the loop body and continue with the next iteration in PL/SQL?
+a) BREAK
+b) EXIT 
+c) RETURN
+d) CONTINUE +
+9. Which loop type does not have a predefined exit condition and requires an explicit `EXIT` or `EXIT WHEN` statement?
+a) Simple Loop +
+b) WHILE Loop
+c) Numeric FOR Loop
+d) Cursor FOR Loop
+10. What is the advantage of using a cursor FOR loop over a regular FOR loop when iterating through a result set?
+a) It allows you to define multiple cursors simultaneously.
+b) It automatically opens and closes the cursor.
+c) It allows you to specify the loop range directly in the cursor declaration.
+d) It can handle nontrivial increments in the loop index.
