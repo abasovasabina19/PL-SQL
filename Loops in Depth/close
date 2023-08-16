@@ -47,6 +47,6 @@ c) Numeric FOR Loop
 d) Cursor FOR Loop
 10. What is the advantage of using a cursor FOR loop over a regular FOR loop when iterating through a result set?
 a) It allows you to define multiple cursors simultaneously.
-b) It automatically opens and closes the cursor.
+b) It automatically opens and closes the cursor.+
 c) It allows you to specify the loop range directly in the cursor declaration.
 d) It can handle nontrivial increments in the loop index.
