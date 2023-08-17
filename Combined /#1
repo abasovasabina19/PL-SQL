@@ -56,3 +56,60 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('Started.');
     END IF;
 END;
+**Task 8: Anonymous Block with Multiple Conditions**
+Task: Write an anonymous block that checks if `v_salary` of employee with `employee_id` 135 is greater
+than 10000 and `v_commission_pct` is not null. If true, print "Eligible for Bonus."
+DECLARE
+   v_salary NUMBER;
+   v_commission_pct NUMBER;
+BEGIN
+   SELECT salary, commission_pct INTO v_salary, v_commission_pct FROM employees WHERE employee_id = 135;
+   IF v_salary>1000 and v_commission_pct is not null then
+   print('Eligible for Bonus');
+   END IF;
+END;
+-- istinad etdiyim procedur print:
+create or replace procedure print(p_text varchar2) is 
+begin
+dbms_output.put_line(p_text);
+end;
+**Task 9: Anonymous Block with Data Type Conversion**
+Task: WriDECLARE
+   v_start_date DATE;
+   v_julian_day NUMBER;
+BEGIN
+   SELECT hire_date INTO v_start_date FROM employees WHERE employee_id = 140;
+
+   v_julian_day := TO_NUMBER(TO_CHAR(v_start_date, 'J'));
+   print(v_julian_day);
+   
+END;
+set serveroutput on;te an anonymous block that converts the `v_start_date` of employee with `employee_id` 140 into a Julian day format and prints it.
+**Task 10: Anonymous Block with Nested IF-ELSE**
+Task: Write an anonymous block that checks the value of `v_job_id`. If it's 'IT_PROG', 
+check ifDECLARE
+   v_job_id VARCHAR2(10);
+   v_salary NUMBER;
+BEGIN
+   SELECT job_id, salary INTO v_job_id, v_salary FROM employees WHERE employee_id = 145;
+   IF v_job_id='IT_PROG' then 
+   IF v_salary>5000 then 
+   print('Eligible for Promotion');
+   END IF;
+   END IF;
+   
+END;
+SET SERVEROUTPUT ON;
+
+ --2ci usul
+DECLARE
+   v_job_id VARCHAR2(10);
+   v_salary NUMBER;
+BEGIN
+   SELECT job_id, salary INTO v_job_id, v_salary FROM employees WHERE employee_id = 145;
+   
+   IF v_job_id = 'IT_PROG' AND v_salary > 5000 THEN
+      print('Eligible for Promotion.');
+      END IF;
+      END; `v_salary` is greater than 5000. If both conditions are true, print "Eligible for Promotion."
+
