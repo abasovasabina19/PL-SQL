@@ -85,6 +85,27 @@ end;
 
 10. **Function with Date Operations**
 - Task: Write a function `func_daysDifference` that takes two dates as arguments and returns the number of days between them.
+CREATE OR REPLACE function func_daysDifference(v_hire_date DATE, v_sysdate DATE) RETURN NUMBER IS
+    days_diff NUMBER;
+BEGIN
+    days_diff := v_sysdate - v_hire_date;
+    RETURN days_diff;
+EXCEPTION
+    WHEN OTHERS THEN
+        RETURN NULL; 
+        END;
+
+set serveroutput on;
+
+declare
+v_result number;
+v_hire_date date;
+begin
+select hire_date into v_hire_date from employees where rownum=1;
+v_result:=func_daysDifference(v_hire_date,sysdate);
+print(v_result);
+end;
+
 
 
 
