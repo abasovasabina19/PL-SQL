@@ -1,0 +1,52 @@
+**Questions:**
+
+1. What is the purpose of a cursor in Oracle PL/SQL?
+a) To define a variable that stores a single value
+b) To retrieve data from the database and process it row by row
+c) To store the result of a query into a table
+d) To create a subprogram in PL/SQL
+2. Which type of cursor is automatically created by Oracle when executing a SQL statement?
+a) Implicit Cursor
+b) Explicit Cursor
+c) Dynamic Cursor
+d) Nested Cursor
+3. What is the key difference between implicit and explicit cursors in Oracle?
+a) Implicit cursors are managed explicitly by the programmer, while explicit cursors are managed implicitly by Oracle.
+b) Implicit cursors are declared using the DECLARE keyword, while explicit cursors are declared using the CURSOR keyword.
+c) Implicit cursors are suitable for multi-row queries, while explicit cursors are suitable for single-row queries.
+d) Implicit cursors are automatically created by Oracle for SQL statements, while explicit cursors need to be declared and handled by the programmer.
+4. Which statement is used to open an explicit cursor in Oracle PL/SQL?
+a) OPEN cursor_name;
+b) FETCH cursor_name;
+c) DECLARE cursor_name;
+d) CLOSE cursor_name;
+5. When using an explicit cursor in a loop, which condition should be checked to determine if there are no more rows to fetch?
+a) cursor_name%FOUND
+b) cursor_name%NOTFOUND
+c) cursor_name%ROWCOUNT
+d) cursor_name%ISOPEN
+6. In an implicit cursor, what is the effect of executing a SELECT statement that returns no rows?
+a) The program will terminate with an error.
+b) The program will continue executing without any issues.
+c) The program will prompt the user to input rows manually.
+d) The program will raise a NO_DATA_FOUND exception.
+7. What is the purpose of the FOR UPDATE clause in an SQL query used with a cursor in Oracle?
+a) It specifies that the cursor is read-only and cannot be used for updates.
+b) It allows the cursor to lock the rows for update, preventing other transactions from modifying them.
+c) It optimizes the query execution and improves performance.
+d) It forces the cursor to fetch rows in ascending order based on the primary key.
+8. Which of the following is a valid way to close an explicit cursor in Oracle PL/SQL?
+a) CLOSE cursor_name;
+b) CLOSE cursor_name%ROWCOUNT;
+c) CLOSE cursor_name%FOUND;
+d) CLOSE cursor_name%NOTFOUND;
+9. In a scenario where you need to process data row by row and the SQL query is not known beforehand, which type of cursor is more suitable?
+a) Implicit Cursor
+b) Explicit Cursor
+c) Dynamic Cursor
+d) Nested Cursor
+10. What happens if you try to fetch data from a closed explicit cursor in Oracle PL/SQL?
+a) The program will raise a NO_DATA_FOUND exception.
+b) The program will terminate with an error.
+c) The program will fetch data from the cursor successfully.
+d) The program will go into an infinite loop.
