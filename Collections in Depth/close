@@ -8,20 +8,20 @@ d) Nested Tables support bulk operations, while Varrays do not.
 2. Which type of collection in Oracle is suitable when you need to store data with non-numeric or non-sequential keys?
 a) Nested Tables
 b) Varrays
-c) Associative Arrays
+c) Associative Arrays +
 d) All of the above
 3. Which collection type is ideal for scenarios where the size of the data set is unpredictable and may vary during runtime?
-a) Nested Tables
+a) Nested Tables +
 b) Varrays
 c) Associative Arrays
 d) All of the above
 4. In an Associative Array, what happens if you assign a value to a key that does not exist in the collection?
-a) The collection automatically extends to include the new key-value pair.
+a) The collection automatically extends to include the new key-value pair.+
 b) An error is raised, and you need to use the `EXTEND` method to add the new key-value pair.
 c) The collection remains unchanged, and the assignment is ignored.
 d) The collection is resized to accommodate the new key.
 5. Which collection type is suitable when you know the exact number of elements you need to store and want to limit the size of the collection?
 a) Nested Tables
-b) Varrays
+b) Varrays +
 c) Associative Arrays
 d) All of the above
