@@ -1,0 +1,14 @@
+CREATE OR REPLACE PROCEDURE add_new_column(
+    p_column_name IN VARCHAR2,
+    p_data_type IN VARCHAR2
+)
+AS
+BEGIN
+    EXECUTE IMMEDIATE 'ALTER TABLE library ADD ' || p_column_name || ' ' || p_data_type;
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Yeni sütun yaradıldı. Ad: ' || p_column_name);
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Xəta baş verdi: ' || SQLERRM);
+END;
