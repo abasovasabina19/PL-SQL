@@ -1,0 +1,25 @@
+CREATE OR REPLACE PROCEDURE update_book_price_with_discount(
+    p_book_id IN NUMBER,
+    p_discount_percent IN NUMBER
+)
+AS
+    v_original_price NUMBER;
+BEGIN
+    -- Kitabın asılıqiçin qiyməti əldə et
+    SELECT price INTO v_original_price
+    FROM library
+    WHERE book_id = p_book_id;
+
+    UPDATE library
+    SET price = v_original_price - (v_original_price * p_discount_percent / 100)
+    WHERE book_id = p_book_id;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Qiymət endirimlə yeniləndi. Kitab ID: ' || p_book_id);
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('Kitab tapılmadı. Kitab ID: ' || p_book_id);
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Xəta baş verdi: ' || SQLERRM);
+END;
