@@ -1,0 +1,29 @@
+CREATE TABLE library (
+    book_id NUMBER,
+    book_title VARCHAR2(100),
+    author_name VARCHAR2(50),
+    publication_date DATE,
+    price NUMBER(10, 2)
+);
+
+CREATE SEQUENCE book_id_sequence 
+START WITH 1 
+INCREMENT BY 1;
+
+CREATE OR REPLACE PROCEDURE insert_book(
+    p_book_title IN VARCHAR2,
+    p_author_name IN VARCHAR2,
+    p_publication_date IN DATE,
+    p_price IN NUMBER
+)
+BEGIN
+    INSERT INTO library(book_id, book_title, author_name, publication_date, price)
+    VALUES (book_id_sequence.NEXTVAL, p_book_title, p_author_name, p_publication_date, p_price);
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Kitab əlavə edildi.');
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Xəta baş verdi: ' || SQLERRM);
+END;
