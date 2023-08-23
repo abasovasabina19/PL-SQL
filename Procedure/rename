@@ -1,0 +1,13 @@
+CREATE OR REPLACE PROCEDURE rename_column_simple(
+    p_new_column_name IN VARCHAR2
+)
+AS
+BEGIN
+    EXECUTE IMMEDIATE 'ALTER TABLE library RENAME COLUMN p_price TO ' || p_new_column_name;
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Sütun adı dəyişdirildi. Yeni ad: ' || p_new_column_name);
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Xəta baş verdi: ' || SQLERRM);
+END;
