@@ -1,0 +1,25 @@
+CREATE TABLE book_discount (
+    book_id NUMBER,
+    discount_percent NUMBER(5, 2),
+    PRIMARY KEY (book_id)
+);
+
+
+CREATE OR REPLACE PROCEDURE delete_books_with_updated_price
+AS
+BEGIN
+    DELETE FROM library
+    WHERE book_id IN (
+        SELECT l.book_id
+        FROM library l
+        JOIN book_discounts b ON l.book_id = b.book_id
+        WHERE l.price <> l.price - (l.price * b.discount_percent / 100)
+    );
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Qiyməti yenilən kitablar silindi.');
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        DBMS_OUTPUT.PUT_LINE('Xəta baş verdi: ' || SQLERRM);
+END;
