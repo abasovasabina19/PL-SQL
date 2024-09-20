@@ -38,8 +38,8 @@ END ;
 /
 6. **Function with Conditional Logic**
     - Task: Write a function `func_ageGroup` that takes an age as a parameter and returns 'Child' if age is less than 18, 'Adult' otherwise.
-create or replace function func_ageGroup(age NUMBER) RETURN number is
-v_ageGroup varchar2;
+create or replace function func_ageGroup(age NUMBER) RETURN varchar2 is
+v_ageGroup varchar2(20);
 begin
 IF age>18 then
 v_ageGroup:='Adult';
@@ -48,6 +48,14 @@ v_ageGroup:='Child';
 end IF;
 Return v_ageGroup;
 end func_ageGroup;
+/
+DECLARE
+    v_result varchar2(20);
+BEGIN
+    v_result := func_ageGroup(20);
+    DBMS_OUTPUT.PUT_LINE('Result: ' || v_result);
+END;
+/
 7. **Procedure Using Loop**
     - Task: Create a procedure `proc_displayNumbers` that takes a number `n` and prints numbers from 1 to `n`.
 create or replace procedure proc_displayNumbers(n number) as
