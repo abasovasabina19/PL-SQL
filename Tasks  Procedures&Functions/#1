@@ -39,7 +39,7 @@ END ;
 6. **Function with Conditional Logic**
     - Task: Write a function `func_ageGroup` that takes an age as a parameter and returns 'Child' if age is less than 18, 'Adult' otherwise.
 create or replace function func_ageGroup(age NUMBER) RETURN number is
-v_ageGrouo varchar2;
+v_ageGroup varchar2;
 begin
 IF age>18 then
 v_ageGroup:='Adult';
