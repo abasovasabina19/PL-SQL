@@ -68,11 +68,13 @@ for i IN 1..n loop
     - Task: Write a function `func_calculateArea` that takes the radius of a circle as an argument and returns its area.
 create or replace function func_calculateArea(radius NUMBER) RETURN number is 
 v_area number;
-pi number;
+pi number:= 3.14159;
 begin
 v_area:=radius*radius*pi/2;
   RETURN v_area;
 end;
+/
+select func_calculateArea(10) from dual
 9. **Procedure with Exception Handling**
  - Task: Create a procedure `proc_divide` that takes two numbers and prints their division result. It should handle division by zero and print 
 an error message for it.
