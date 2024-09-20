@@ -67,10 +67,10 @@ for i IN 1..n loop
 8. **Function Using Arithmetic Operations**
     - Task: Write a function `func_calculateArea` that takes the radius of a circle as an argument and returns its area.
 create or replace function func_calculateArea(radius NUMBER) RETURN number is 
-v_area number,
+v_area number;
 pi number;
 begin
-v_area:=radius*radius*pi/2
+v_area:=radius*radius*pi/2;
   RETURN v_area;
 end;
 9. **Procedure with Exception Handling**
