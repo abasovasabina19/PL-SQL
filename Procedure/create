@@ -15,7 +15,7 @@ CREATE OR REPLACE PROCEDURE insert_book(
     p_author_name IN VARCHAR2,
     p_publication_date IN DATE,
     p_price IN NUMBER
-)
+) is
 BEGIN
     INSERT INTO library(book_id, book_title, author_name, publication_date, price)
     VALUES (book_id_sequence.NEXTVAL, p_book_title, p_author_name, p_publication_date, p_price);
