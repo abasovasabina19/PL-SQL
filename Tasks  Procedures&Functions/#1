@@ -19,7 +19,7 @@ END func_square;
 /
 4. **Function with String Manipulation**
     - Task: Write a function `func_upper` that takes a string and returns its uppercase version.
-CREATE OR REPLACE function func_upper(a_string string) RETURN NUMBER AS
+CREATE OR REPLACE function func_upper(a_string varchar2) RETURN varchar2 AS
 BEGIN
     RETURN upper(a_string);
 END func_upper;
